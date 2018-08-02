@@ -878,12 +878,15 @@
 
     
 <script>
-    (function () {
+   
+    window.onresize = fontStyle;
+    fontStyle();
+    function fontStyle() {
         var html = document.documentElement;
         var width = html.clientWidth;
         var size = width / 10;
         html.style.fontSize = size + 'px';
-    })()
+    }
 </script>
 </body>
 </html>
